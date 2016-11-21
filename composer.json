@@ -1,0 +1,20 @@
+{
+  "name": "volkish/laravel-date-formatter",
+  "description": "Laravel Date Formatter",
+  "minimum-stability": "stable",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "Artem Ivanov",
+      "email": "ai@artem.cc"
+    }
+  ],
+  "require": {
+    "illuminate/support": "^5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Volkish\\Laravel\\": "src/"
+    }
+  }
+}
