@@ -18,9 +18,8 @@ class DateFormatter
 	 */
 	public function __construct(array $config)
 	{
-		$this->formatter = new IntlDateFormatter("ru_RU", IntlDateFormatter::FULL,
-			IntlDateFormatter::FULL,
-			'Etc/GMT-3', IntlDateFormatter::GREGORIAN);
+		$this->formatter = new IntlDateFormatter($config['locale'], $config['datetype'],
+			$config['timetype'], $config['timezone'], $config['calendar']);
 	}
 
 	/**
