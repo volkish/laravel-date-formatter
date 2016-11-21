@@ -1,7 +1,7 @@
 {
   "name": "volkish/laravel-date-formatter",
   "description": "Laravel Date Formatter",
-  "minimum-stability": "stable",
+  "type": "library",
   "license": "GPL",
   "authors": [
     {
