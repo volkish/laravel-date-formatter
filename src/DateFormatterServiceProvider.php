@@ -20,7 +20,7 @@ class DateFormatterServiceProvider extends ServiceProvider
 	{
 		// merge default config
 		$this->mergeConfigFrom(
-			__DIR__ . '/../../config/date_formatter.php',
+			__DIR__ . '/../config/date_formatter.php',
 			'date_formatter'
 		);
 
