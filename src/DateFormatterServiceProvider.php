@@ -12,7 +12,7 @@ class DateFormatterServiceProvider extends ServiceProvider
 	{
 		/** @noinspection PhpUndefinedFunctionInspection */
 		$this->publishes([
-			__DIR__ . '/../config/date_formatter.php' => config_path('date_formatter'),
+			__DIR__ . '/../config/date_formatter.php' => config_path('date_formatter.php'),
 		]);
 	}
 
