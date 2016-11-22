@@ -18,7 +18,8 @@ class DateFormatter
 	 */
 	public function __construct(array $config)
 	{
-		$this->formatter = new IntlDateFormatter($config['locale'], $config['datetype'],
+		$this->formatter = new IntlDateFormatter($config['locale'],
+			$config['datetype'],
 			$config['timetype'], $config['timezone'], $config['calendar']);
 	}
 
@@ -34,8 +35,9 @@ class DateFormatter
 		// Changing pattern before formatting
 		$this->formatter->setPattern($format);
 
-		// Check for timestamp
-		if (! is_numeric($timestamp)) {
+		if ($timestamp instanceof \DateTime) {
+			$timestamp = $timestamp->getTimestamp();
+		} else if (! is_numeric($timestamp)) {
 			$timestamp = strtotime($timestamp);
 		}
 
